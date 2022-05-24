@@ -1,0 +1,1932 @@
+function onOpen(e) 
+
+//ads a custom menu to the UI
+  SpreadsheetApp.getUi() 
+      .createMenu('Scripts')
+      .addItem('Run Report', 'mainGetUserList')
+      .addToUi();
+};
+
+
+function mainGetUserList()
+
+{{
+//set the spreadsheet and define the Google groups to be included in the report in the groupkey variables
+var onSheet = SpreadsheetApp.getActiveSpreadsheet();
+var groupKey = 
+var groupkey2 = 
+var groupkey3 = 
+var groupkey4 = 
+var groupkey5 = 
+var groupkey6 = 
+var groupkey7 = 
+var groupkey8 = 
+var groupkey9 = 
+var groupkey10 = 
+var groupkey11 =
+var groupkey12 =
+var groupkey13 = 
+var groupkey14 = 
+var groupkey15 = 
+var groupkey16 = 
+var groupkey17 = 
+var groupkey18 =
+var groupkey19 =
+var groupkey20 = 
+var groupkey21 = 
+var groupkey22 = 
+var groupkey23 = 
+var groupkey24 = 
+var groupkey25 = 
+var groupkey26 = 
+var groupkey27 = 
+var groupkey28 = 
+var groupkey29 = 
+var groupkey30 = 
+var groupkey31 = 
+var groupkey32 = 
+var groupkey33 = 
+var groupkey34 = 
+var groupkey35 = 
+var groupkey36 =
+var groupkey37 =
+var groupkey38 =
+var groupkey40 = 
+var groupkey41 = 
+var groupkey42 = 
+var groupkey43 = 
+var groupkey45 = 
+var groupkey46 = 
+var groupkey47 = 
+var groupkey48 = 
+var groupkey49 = 
+var groupkey50 = 
+var groupkey51 = 
+var groupkey52 = 
+var groupkey53 =
+var groupkey54 = 
+var groupkey55 = 
+var groupkey56 = 
+var groupkey57 = 
+var groupkey58 = 
+var groupkey59 = 
+var groupkey60 = 
+
+//update the below to include the name of each sheet in the sheedata variable and the name of the domain used by the Google account to update the domain name
+    var rows = [];
+  
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupKey,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupKey, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+{
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey2,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey2, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey3,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey3, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey4,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey4, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey5,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey5, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+{
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey6,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey6, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey7,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey7, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+{
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey8,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey8, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey9,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey9, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey10,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey10, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey11,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey11, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey12,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey12, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey13,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey13, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey14,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey14, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey15,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey15, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey16,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey16, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey17,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey17, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey18,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey18, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey19,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey19, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey20,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey20, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+        {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey21,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey21, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey22,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey22, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(1, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey22,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey22, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey23,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey23, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(1, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey24,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey24, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey25,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey25, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey26,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey26, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey27,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey27, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey28,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey28, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey29,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey29, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey30,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey30, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey31,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey31, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey32,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey32, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey33,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey33, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey34,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey34, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey35,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey35, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(0, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey36,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey36, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey37,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey37, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(1, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey38,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey38, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey40,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey40, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey41,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey41, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(1, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey42,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey42, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey45,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey45, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey46,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey46, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey47,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey47, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey48,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey48, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(1, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey49,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey49, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey50,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey50, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+
+  {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey51,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey51, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey52,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey52, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey53,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey53, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey54,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey54, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey55,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey55, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey56,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey56, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey57,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey57, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey58,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey58, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey59,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey59, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}
+    {
+    var rows = [];
+    var pageToken, page;
+    do {
+        page = AdminDirectory.Members.list(groupkey60,
+        {
+            domainName: '',
+            maxResults: 500,
+            pageToken: pageToken,
+        });
+        var members = page.members
+        if (members)
+        {
+            for (var i = 0; i < members.length; i++)
+            {
+                var member = members[i];
+                var row = [groupkey60, member.email, member.role, member.status];
+                Logger.log (row)
+                rows.push(row);
+            }
+        }
+        pageToken = page.nextPageToken;
+    } while (pageToken);
+    if (rows.length > 1)
+    {
+        var sheetData = onSheet.getSheetByName("")
+        var header = ['Group Name', 'User Id', 'User role', 'User Status']
+  ;
+        sheetData.clear()
+        sheetData.appendRow(header).setFrozenRows(1);
+        sheetData.getRange(2, 1, rows.length, header.length).setValues(rows);
+    }}}}}
